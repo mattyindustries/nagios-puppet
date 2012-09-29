@@ -2,7 +2,7 @@ This Project is to build a PuppetMaster and Nagios Server with configuration gen
 
 Requirements:
 
-Vagrant
-PuppetMaster > 2.7.12
-PuppetDB
-Nagios 3
+Vagrant  
+PuppetMaster > 2.7.12  
+PuppetDB  
+Nagios 3  
