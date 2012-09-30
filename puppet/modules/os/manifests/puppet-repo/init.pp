@@ -14,4 +14,10 @@ class os::puppet-repo::init {
   file { '/etc/apt/trusted.gpg.d/puppetlabs-keyring.gpg':
     source  => "puppet:///modules/os/puppet-repo/puppetlabs-keyring.gpg",
   }
+  
+  exec { 'apt-update':
+    command     => '/usr/bin/apt-get update',
+    refreshonly => true,
+    subscribe   => File['/etc/apt/sources.list.d/puppetlabs.list']
+  }
 }
